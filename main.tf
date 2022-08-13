@@ -5,12 +5,11 @@ data "aws_ami" "my_ubuntu" {
       name = "name"
       values = ["K8-Master"]
     }
-    
 }
 
 
 resource "aws_instance" "my_instance1" {
-	ami = var.my_ami
+	ami = data.aws_ami.my_ubuntu.id
 	instance_type = var.instance_type
 	tags = {
 	     Name = "terraform-instence1"
