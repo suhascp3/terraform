@@ -1,9 +1,11 @@
-variable "my_ami" {
-    type = string
-    default = "ami-068257025f72f470d"
+variable "root_bucket_name" {
+    default = "my-first-backend-bucket-9856472"
 }
 
-variable "instance_type" {
-    type = string
-    default = "t2.micro"
+variable "root_hash_key" {
+    default = "LockID"
+}
+
+variable "root_dynamodb_name" {
+    default = "my_dynamodb_locking_table"
 }
